@@ -23,14 +23,18 @@ body {
 }
 .background_web img {
   display: none;
-}
-.background_web img.active {
-  display: block;
   width: 100%;
+}
+.background_web > .mobile {
+  display: block;
+}
+.background_web > .desktop {
+  display: none;
 }
 
 main {
   width: 100%;
+  height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -40,23 +44,28 @@ main {
 }
 
 .accordion {
-  min-width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 300px;
+  max-width: 540px;
   border-radius: 15px;
   background-color: #fff;
-  padding: 25px;
+  padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
 }
 .accordion--title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  gap: 20px;
+  gap: 25px;
 }
 .accordion--title h1 {
   font-size: 1.8rem;
@@ -66,19 +75,19 @@ main {
   width: 25px;
   height: 25px;
 }
-.accordion .accordion--item {
+.accordion--item {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  gap: 10px;
   border-bottom: 1px solid #f1f1f1;
-  padding: 0 0 20px 0;
+  padding: 0 0 25px 0;
+  gap: 25px;
 }
-.accordion .accordion--item:last-child {
+.accordion--item:last-child {
   border-bottom: 0;
 }
-.accordion .accordion--item--title {
+.accordion--item--title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,32 +97,41 @@ main {
   font-weight: 600;
   width: 100%;
 }
-.accordion .accordion--item--title :hover {
+.accordion--item--title :hover {
   cursor: pointer;
   color: #BB5CCE;
 }
-.accordion .accordion--item--title--icon {
+.accordion--item--title--icon {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   transition: all 0.3s ease-in-out;
 }
-.accordion .accordion--item--title--icon button {
+.accordion--item--title--icon img {
   background: none;
   border: 0;
   border-radius: 50%;
   display: none;
 }
-.accordion .accordion--item--title--icon button.active {
+.accordion--item--title--icon img.active {
   display: block;
 }
-.accordion .accordion--item--detail {
+.accordion--item--detail {
   display: none;
   font-size: 0.9rem;
   font-weight: 300;
   line-height: 1.5;
 }
-.accordion .accordion--item--detail.active {
+.accordion--item--detail.active {
   display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .background_web > .mobile {
+    display: none;
+  }
+  .background_web > .desktop {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */
