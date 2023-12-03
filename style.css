@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #F8EBFF;
+}
+
+.background_web {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.background_web img {
+  display: none;
+}
+.background_web img.active {
+  display: block;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.accordion {
+  min-width: 200px;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 25px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 20px;
+}
+.accordion--title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+.accordion--title h1 {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+.accordion--title img {
+  width: 25px;
+  height: 25px;
+}
+.accordion .accordion--item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 0 0 20px 0;
+}
+.accordion .accordion--item:last-child {
+  border-bottom: 0;
+}
+.accordion .accordion--item--title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+}
+.accordion .accordion--item--title :hover {
+  cursor: pointer;
+  color: #BB5CCE;
+}
+.accordion .accordion--item--title--icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+.accordion .accordion--item--title--icon button {
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  display: none;
+}
+.accordion .accordion--item--title--icon button.active {
+  display: block;
+}
+.accordion .accordion--item--detail {
+  display: none;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.accordion .accordion--item--detail.active {
+  display: block;
+}/*# sourceMappingURL=style.css.map */
